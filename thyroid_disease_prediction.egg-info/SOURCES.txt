@@ -1,0 +1,6 @@
+setup.py
+src/__init__.py
+thyroid_disease_prediction.egg-info/PKG-INFO
+thyroid_disease_prediction.egg-info/SOURCES.txt
+thyroid_disease_prediction.egg-info/dependency_links.txt
+thyroid_disease_prediction.egg-info/top_level.txt

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Thyroid Detection</title>
+  
+  <style>
+    body {
+      background-color: #000000;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center; 
+      align-items: center; 
+      height: 100vh;
+    }
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      top: 0;
+      padding: 10px;
+      position: fixed;
+      width: 100%;
+      z-index: 1;
+      backdrop-filter: blur(10px);
+  }
+
+  .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+  }
+
+  .navbar a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+  }
+
+    .login {
+      text-align: center;
+      margin-top: 100px;
+      padding: 20px;
+      width: 650px;
+      height: auto; 
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    h1 {
+      color: #333; 
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    input[type="text"], select {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    select {
+      background-color: white; 
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color:black;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color:rgb(202, 199, 199);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <a onclick="openHomePage()">Home</a>
+    <a onclick="openAboutPage()">About</a>
+    <a onclick="openContactPage()">Contact Us</a>
+  </div>
+  <div class="login">
+    <h1>Thyroid Detection</h1>
+
+    <form action="{{ url_for('predict_data')}}" method="post">
+      <input type="text" name="Age" placeholder="Enter your age" required="required" /><br>
+      <select id="gender" name="Gender" required="required">
+        <option selected disabled hidden>Select your gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select><br>
+      <select name="Free_T4" required="required">
+        <option selected disabled hidden>Select Free T4 status</option>
+        <option value="True">True</option>
+        <option value="False">False</option>
+      </select><br>
+      <select name="TSH" required="required">
+        <option selected disabled hidden>Select TSH status</option>
+        <option value="True">True</option>
+        <option value="False">False</option>
+      </select><br>
+      <select name="T3" required="required">
+        <option selected disabled hidden>Select T3 status</option>
+        <option value="True">True</option>
+        <option value="False">False</option>
+      </select><br>
+      <select name="TT4" required="required">
+        <option selected disabled hidden>Select TT4 status</option>
+        <option value="True">True</option>
+        <option value="False">False</option>
+      </select><br>
+      <select name="FTI" required="required">
+        <option selected disabled hidden>Select FTI status</option>
+        <option value="True">True</option>
+        <option value="False">False</option>
+      </select><br>
+      <select name="TBG" required="required">
+        <option selected disabled hidden>Select TBG status</option>
+        <option value="True">True</option>
+        <option value="False">False</option>
+      </select><br>
+      <select name="Pregnant" required="required">
+        <option selected disabled hidden>Are you pregnant?</option>
+        <option value="True">True</option>
+        <option value="False">False</option>
+      </select><br>
+      <select name="Goitre" required="required">
+        <option selected disabled hidden>Do you have Goitre?</option>
+        <option value="True">True</option>
+        <option value="False">False</option>
+      </select><br>
+      <button type="submit">Predict</button>
+    </form>
+
+    <h2>Result: {{result}}</h2>
+  </div>
+  <script>
+    function openHomePage() {
+      var url = '/home';
+      window.open(url, '_blank');
+    }
+
+    function openContactPage() {
+      var url = '/contact';
+      window.open(url, '_blank');
+    }
+
+    function openAboutPage() {
+      var url = '/about';
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>

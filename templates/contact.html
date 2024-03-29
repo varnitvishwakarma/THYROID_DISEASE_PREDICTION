@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Thyroid Detection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:black;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            z-index: 1;
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .container {
+            text-align: center;
+            margin: 20px;
+            margin-top: 100px;
+        }
+
+        h1 {
+            font-size: 60px;
+            text-align: center;
+            margin-top: 20px;
+            color: black; 
+        }
+
+        .contact-info {
+            margin-top: -100px;
+        }
+
+        .contact-box {
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            width: 70%;
+        }
+
+        h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .contact-item {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .email-link, .social-link {
+            text-decoration: none;
+            color: black;
+        }
+
+        .email-icon, .social-icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a onclick="openHomePage()">Home</a>
+        <a onclick="openAboutPage()">About</a>
+        <a onclick="openContactPage()">Contact Us</a>
+    </div>
+    <div class="container">
+        <h1>Contact Us</h1>
+    </div>
+
+    <div class="contact-info">
+        <div class="contact-box">
+            <h2>Contact Information</h2>
+            <p class="contact-item">
+                <i class="fas fa-envelope email-icon"></i>
+                <a href="mailto:varnitusar25@gmail.com" class="email-link">varnitusar25@gmail.com</a>
+            </p>
+            <p class="contact-item">
+                <i class="fab fa-linkedin social-icon"></i>
+                <a href="https://www.linkedin.com/in/varnitviswakarma/" target="_blank" class="social-link">LinkedIn</a>
+            </p>
+            <p class="contact-item">
+                <i class="fab fa-instagram-square social-icon"></i>
+                <a href="https://www.instagram.com/varnitvishwakarma/" target="_blank" class="social-link">Instagram</a>
+            </p>
+            <p class="contact-item">
+                <i class="fab fa-github-square social-icon"></i>
+                <a href="https://github.com/varnitvishwakarma" target="_blank" class="social-link">GitHub</a>
+            </p>
+            <p class="contact-item">
+                <i class="fab fa-facebook-square social-icon"></i>
+                <a href="https://www.facebook.com/varnit.vishwakarma/" target="_blank" class="social-link">Facebook</a>
+            </p>
+            <p class="contact-item">
+                <i class="fab fa-twitter-square social-icon"></i>
+                <a href="https://twitter.com/varnitvishwkrma" target="_blank" class="social-link">Twitter</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function openHomePage() {
+            var url = '/home';
+            window.open(url, '_blank');
+        }
+        
+        function openAboutPage() {
+            var url = '/about';
+            window.open(url, '_blank');
+        }
+        
+    </script>
+</body>
+</html>

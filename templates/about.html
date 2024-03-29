@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>About Thyroid Detection</title>
+  
+  <style>
+    body {
+      background-color: #000000;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center; 
+      align-items: center; 
+      height: 100vh;
+    }
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      top: 0;
+      padding: 10px;
+      position: fixed;
+      width: 100%;
+      z-index: 1;
+      backdrop-filter: blur(10px);
+  }
+
+  .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+  }
+
+  .navbar a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+  }
+
+    .about {
+      text-align: center;
+      margin-top: 100px;
+      padding: 20px;
+      width: 650px;
+      height: auto; 
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    h1 {
+      color: #333; 
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a onclick="openHomePage()">Home</a>
+        <a onclick="openAboutPage()">About</a>
+        <a onclick="openContactPage()">Contact Us</a>
+    </div>
+  <div class="about">
+    <h1>About Thyroid Detection Web App</h1>
+
+    <p>Hello! Welcome to the Thyroid Detection Web App. My name is Varnit and I'm pursuing my B.Tech in Artificial Intelligence and Data Science from GGSIPU.</p>
+
+    <p>This web app is designed to assist in the detection of thyroid conditions. Thyroid disorders are common and can have significant impacts on health. With the help of advanced machine learning algorithms, this web app predicts the likelihood of thyroid disorders based on various parameters such as age, gender, and laboratory test results including Free T4, TSH, T3, TT4, FTI, TBG, and other factors.</p>
+
+    <p>By providing accurate and timely predictions, this web app aims to aid medical professionals and individuals in identifying potential thyroid issues early, allowing for prompt intervention and treatment.</p>
+
+    <p>Thank you for using our Thyroid Detection Web App!</p>
+  </div>
+  <script>
+    function openHomePage() {
+        var url = '/home';
+        window.open(url, '_blank');
+    }
+    
+    function openContactPage() {
+        var url = '/contact';
+        window.open(url, '_blank');
+    }
+    
+</script>
+</body>
+</html>
